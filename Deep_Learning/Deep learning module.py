@@ -131,7 +131,7 @@ for idx, name in enumerate(names):
     else:
         print("FAILED")
 
-# The following function will randomly generate initial weights for the neural network.
+# The following function randomly generates initial weights for the neural network.
 
 
 def initweights(specs):
@@ -161,9 +161,7 @@ def forward_pass(weights, xTr, trans_func):
     
     OUTPUTS:
         A, Z - result of forward pass (cell array of length m+1)
-    
-    Hint:
-        Make sure A[0]=Z[0]=xTr and A[m] = Z[m] (Why?)
+
     """
     
     n = xTr.shape[0]
@@ -290,7 +288,7 @@ def plot_results(x, y, Z, losses):
 
 
 #  We can use the gradients computed from back propagation to update the weights in each layer. 
-# There are quite a few ways to do the update. Here we demonstrate three variations of gradient descent.
+# Three variations of gradient descent.
 
 # Momentum
 
