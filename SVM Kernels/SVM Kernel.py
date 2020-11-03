@@ -85,10 +85,6 @@ err=np.mean(arrayify(np.sign(fun(xTr)))!=yTr)
 print("Training error: %2.1f%%" % (err*100))
 
 
-# ### Helper functions used to create animation
-
-
-
 
 def updateboundary():
     global w,b,Xdata,ldata,stepsize
@@ -127,9 +123,6 @@ def onclick(event):
     stepsize=1;
 
 
-# ### Animation
-
-
 Xdata=pylab.rand(2,0)
 ldata=[]
 w=[]
@@ -145,8 +138,6 @@ ani = FuncAnimation(fig, animate,pylab.arange(1,100,1),interval=10);
 
 
 # Spiral data set
-
-
 
 def spiraldata(N=300):
     r = np.linspace(1,2*np.pi,N)
@@ -285,8 +276,6 @@ K = computeK(ktype,xTr,xTr)
 
 alpha=dualqp(K,yTr,C)
 
-
-# <p> Now that you can solve the dual correctly, you should have the values for $\alpha_i$. But you are not done yet.
 # Seeking to classify new test points. 
 # Obtaining the bias and the value of the alphas to achieve the same
 # b=recoverBias(K,yTr,alphas,C)
