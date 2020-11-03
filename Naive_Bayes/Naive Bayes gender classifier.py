@@ -67,14 +67,12 @@ def genFeatures(dimension, name2features, file_girls, file_boys):
     return X[ii, :], Y[ii]
 
 
-# You can call the following command to load in the features and the labels of all boys and girls names. 
+#Calling the following command to load in the features and the labels of all boys and girls names. 
 
 
 X,Y = genFeatures(26, name2features, "girls.train", "boys.train")
 xTe, yTe = genFeatures(26, name2features, "girls.test", "boys.test")
 
-
-# Multinomial Na&iuml;ve Bayes Classifier 
 
 def naivebayesPY(x,y):
     """
