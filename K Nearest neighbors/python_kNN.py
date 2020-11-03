@@ -21,7 +21,7 @@ print('You\'re running python %s' % sys.version.split(' ')[0])
 # Here, xTr are the training vectors with labels yTr and xTe are the testing vectors with labels yTe
 
 # Visualizing data
-# Let us take a look at our data. The following script will take the first 10 training images from the face data set and visualize them.
+# The following script will take the first 10 training images from the face data set and visualize them.
 
 
 xTr,yTr,xTe,yTe=loaddata("faces.mat")
@@ -46,8 +46,6 @@ def l2distance(X,Z=None):
     Matrix D of size nxm
     D(i,j) is the Euclidean distance of X(i,:) and Z(j,:)
     
-    call with only one input:
-    l2distance(X)=l2distance(X,X)
     """
 
     if Z is None:
@@ -104,21 +102,10 @@ def findknn(xTr,xTe,k):
 
     return I,D
 
-
-
-
-# The following demo samples random points in 2D. If dknn  function is correctly implemented, ywe can click anywehre 
-# on the plot to add a test point. The function should then draw direct connections
+# The following demo samples random points in 2D. The function should draw direct connections based on where it is clicked
 # from the test points to the k  nearest neighbors. 
 
-
-
-visualize_knn_2D(findknn)
-
-
-# We can visualize the k=3 nearest training neighbors of some of the test points 
-# (Click on the image to cycle through different test points). 
-
+visualize_knn_2D(findknn) 
 
 visualize_knn_images(findknn, imageType='faces')
 
